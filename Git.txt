@@ -1,0 +1,60 @@
+查看分支：git branch
+
+创建分支：git branch <name>
+
+切换分支：git checkout <name>
+
+创建+切换分支：git checkout -b <name>
+
+合并某分支到当前分支：git merge <name>
+
+删除分支：git branch -d <name>
+
+推送分支
+推送分支，就是把该分支上的所有本地提交推送到远程库。推送时，要指定本地分支，这样，Git就会把该分支推送到远程库对应的远程分支上：
+$ git push origin master
+
+如果要推送其他分支，比如dev，就改成：
+$ git push origin dev
+
+如果git pull提示“no tracking information”，则说明本地分支和远程分支的链接关系没有创建，用命令git branch --set-upstream branch-name origin/branch-name。
+这就是多人协作的工作模式，一旦熟悉了，就非常简单
+
+小结
+查看远程库信息，使用git remote -v；
+
+本地新建的分支如果不推送到远程，对其他人就是不可见的；
+
+从本地推送分支，使用git push origin branch-name，如果推送失败，先用git pull抓取远程的新提交；
+
+在本地创建和远程分支对应的分支，使用git checkout -b branch-name origin/branch-name，本地和远程分支的名称最好一致；
+
+建立本地分支和远程分支的关联，使用git branch --set-upstream branch-name origin/branch-name；
+
+从远程抓取分支，使用git pull，如果有冲突，要先处理冲突。
+
+
+
+git push origin branch-name  推送到远程对应的分支上，如果没有就创建
+git checkout -b 本地分支名 origin/远程分支名 (想拉取远程的某个分支，而本地没有，所以 “远程分支名” 必须存在)
+
+ssh-keygen -t rsa -C "1343652445@qq.com"
+cat ~/.ssh/id_rsa.pub | clip
+github  添加远端：git remote add origin https://github.com/BiggerHeader/good.git  另一个 git@xxx.git 不行
+
+
+xclip -sel clip < ~/.ssh/id_rsa.pub
+ssh-keygen -t rsa -C "penghui@che001.com" -f ~/.ssh/github-rsa
+
+ssh:
+git remote remove origin
+git remote add origin git@github.com:Username/Your_Repo_Name.git
+
+BiggerHeader
+15071087253ph
+eshop/che001
+
+周一	金枪鱼帕尼尼套餐	1003-2
+周五	芝士火腿帕尼尼套餐	1003-3
+周三	无碳水金枪鱼蔬菜沙拉	1001-12
+数据库密码：IVPV8KbF9MwZLcmn
